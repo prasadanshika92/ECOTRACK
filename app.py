@@ -89,13 +89,13 @@ ax.set_ylabel("CO₂ Emission")
 
 st.pyplot(fig)
 #theme
-    st.markdown(
-    """
-    <style>
-    body {background-color: #f0f2f6;}
-    </style>
-    """,
-    unsafe_allow_html=True
+st.markdown(
+"""
+<style>
+body {background-color: #f0f2f6;}
+</style>
+""",
+unsafe_allow_html=True
 )
 
 # Footer
