@@ -23,7 +23,7 @@ if st.button("🔍 Calculate My Footprint"):
 
     if food == "Non-Veg":
         carbon += 5
-        score = max(0, 100 - int(carbon)
+        score = max(0, 100 - int(carbon))
                     
     score 70
     st.progress(score)                
