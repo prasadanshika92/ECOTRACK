@@ -45,7 +45,6 @@ if st.button("🔍 Calculate My Footprint"):
 
     # Tips
     tips = []
-    tips = []
 
 tips.append("Use public transport 🚍")
 tips.append("Switch off lights 💡")
@@ -58,8 +57,7 @@ if electricity > 10:
 if food == "Non-Veg":
     tips.append("Try plant-based meals 🥗")
     
-    
-    for tip in tips:
+for tip in tips:
         st.write("👉", tip)
     if carbon < 20:
         st.success("Great job! You're eco-friendly 🌱")
