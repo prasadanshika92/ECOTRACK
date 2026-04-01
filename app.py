@@ -74,20 +74,20 @@ if food == "Non-Veg":
         st.write("🥗 Reduce meat consumption for better impact")
 
     # Graph
-    st.subheader("📊 Your Activity Breakdown")
+st.subheader("📊 Your Activity Breakdown")
 
-    data = {
-        "Category": ["Travel", "Electricity", "Food"],
-        "CO2": [km * 0.21, electricity * 0.82, 5 if food == "Non-Veg" else 2]
-    }
+data = {
+    "Category": ["Travel", "Electricity", "Food"],
+    "CO2": [km * 0.21, electricity * 0.82, 5 if food == "Non-Veg" else 2]
+}
 
-    df = pd.DataFrame(data)
+df = pd.DataFrame(data)
 
-    fig, ax = plt.subplots()
-    ax.bar(df["Category"], df["CO2"])
-    ax.set_ylabel("CO₂ Emission")
+fig, ax = plt.subplots()
+ax.bar(df["Category"], df["CO2"])
+ax.set_ylabel("CO₂ Emission")
 
-    st.pyplot(fig)
+st.pyplot(fig)
 #theme
     st.markdown(
     """
