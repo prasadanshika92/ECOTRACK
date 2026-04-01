@@ -59,18 +59,18 @@ if food == "Non-Veg":
     
 for tip in tips:
         st.write("👉", tip)
-    if carbon < 20:
+if carbon < 20:
         st.success("Great job! You're eco-friendly 🌱")
-    elif carbon < 50:
+elif carbon < 50:
         st.warning("Good, but you can improve 👍")
-    else:
+else:
         st.error("High carbon footprint! Take action ⚠️")
 
-    if km > 20:
+if km > 20:
         st.write("🚶 Try public transport or carpooling")
-    if electricity > 10:
+if electricity > 10:
         st.write("💡 Switch off unused appliances")
-    if food == "Non-Veg":
+if food == "Non-Veg":
         st.write("🥗 Reduce meat consumption for better impact")
 
     # Graph
