@@ -44,8 +44,12 @@ if st.button("🔍 Calculate My Footprint"):
     st.write(f"⭐ Eco Score: {score}/100")
 
     # Tips
-    tips.append("Use public transport 🚍")
     tips = []
+    tips = []
+
+tips.append("Use public transport 🚍")
+tips.append("Switch off lights 💡")
+tips.append("Plant trees 🌱")
 
 if km > 20:
     tips.append("Use public transport 🚍")
