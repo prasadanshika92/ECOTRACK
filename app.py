@@ -43,8 +43,8 @@ if st.button("🔍 Calculate My Footprint"):
 
     st.write(f"⭐ Eco Score: {score}/100")
 
-    # Tips
-    tips = []
+# Tips
+tips = []
 
 tips.append("Use public transport 🚍")
 tips.append("Switch off lights 💡")
