@@ -15,7 +15,7 @@ st.header("📥 Enter Your Daily Habits")
 km = st.number_input("🚗 Travel Distance (km)", min_value=0.0)
 electricity = st.number_input("⚡ Electricity Usage (units)", min_value=0.0)
 food = st.selectbox("🍔 Food Type", ["Veg", "Non-Veg"])
-
+carbon = km * 0.5 + electricity * 1.5 + (5 if food == "Non-Veg" else 2)
 if st.button("🔍 Calculate My Footprint"):
     carbon = (km * 0.21) + (electricity * 0.82)
 
