@@ -12,7 +12,26 @@ st.sidebar.write("Track. Improve. Sustain.")
 # Input Section
 st.header("📥 Enter Your Daily Habits")
 
-km = st.number_input("🚗 Travel Distance (km)", min_value=0.0)
+transport = st.selectbox(
+    "Choose your transport 🚗",
+    ["Car", "Bike", "Cycle", "Truck", "Public Transport"]
+)
+
+km = st.number_input("Distance travelled (km)", 0, 100, 10)
+if transport == "Car":
+    carbon = km * 0.21
+elif transport == "Bike":
+    carbon = km * 0.1
+elif transport == "Cycle":
+    carbon = km * 0.0
+elif transport == "Truck":
+    carbon = km * 0.5
+else:
+    carbon = km * 0.05
+    carbon += electricity * 0.82
+name = st.text_input("Enter your name ✍️")
+st.title(f"🌱 EcoTrack App - {name}")
+
 electricity = st.number_input("⚡ Electricity Usage (units)", min_value=0.0)
 food = st.selectbox("🍔 Food Type", ["Veg", "Non-Veg"])
 carbon = km * 0.5 + electricity * 1.5 + (5 if food == "Non-Veg" else 2)
