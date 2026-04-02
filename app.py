@@ -92,3 +92,17 @@ if st.button("🔍 Calculate My Footprint"):
 # Footer
 st.markdown("---")
 st.caption("Made with ❤️ for Hackathon | EcoTrack AI")
+
+st.header("🤖 Eco AI Chat Assistant")
+
+user_question = st.text_input("Ask me anything about environment 🌍")
+
+if user_question:
+    if "save" in user_question.lower():
+        st.write("👉 Save electricity, use LED bulbs 💡")
+    elif "travel" in user_question.lower():
+        st.write("👉 Use public transport or cycle 🚲")
+    elif "food" in user_question.lower():
+        st.write("👉 Try plant-based diet 🥗")
+    else:
+        st.write("👉 Reduce waste and recycle ♻️")
