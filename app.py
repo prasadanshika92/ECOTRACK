@@ -1,6 +1,23 @@
 import streamlit as st
 import pandas as pd
 import matplotlib.pyplot as plt
+if "logged_in" not in st.session_state:
+    st.session_state.logged_in = False
+
+if not st.session_state.logged_in:
+    st.title("🔐 Login to EcoTrack")
+
+    username = st.text_input("Username")
+    password = st.text_input("Password", type="password")
+
+    if st.button("Login"):
+        if username == "admin" and password == "1234":
+            st.session_state.logged_in = True
+            st.success("Login Successful ✅")
+        else:
+            st.error("Invalid credentials ❌")
+
+    st.stop()
 
 st.set_page_config(page_title="EcoTrack AI 🌱", layout="centered")
 
@@ -106,3 +123,8 @@ if user_question:
         st.write("👉 Try plant-based diet 🥗")
     else:
         st.write("👉 Reduce waste and recycle ♻️")
+
+st.markdown("---")
+if st.button("🚪 Logout"):
+    st.session_state.logged_in = False
+    st.experimental_rerun()
