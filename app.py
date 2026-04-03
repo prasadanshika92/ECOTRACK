@@ -123,6 +123,18 @@ if user_question:
         st.write("👉 Try plant-based diet 🥗")
     else:
         st.write("👉 Reduce waste and recycle ♻️")
+        
+# Reward System (Gamification)
+
+if total <= 5:
+    badge = "🏆 Green Champion"
+elif total <= 10:
+    badge = "🌱 Eco Learner"
+else:
+    badge = "⚠️ Needs Improvement"
+
+st.subheader("🎖️ Your Badge")
+st.success(badge)
 
 st.markdown("---")
 if st.button("🚪 Logout"):
